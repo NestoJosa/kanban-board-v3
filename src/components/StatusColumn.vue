@@ -18,10 +18,12 @@
 <script setup lang="ts">
 import TaskCard from './TaskCard.vue'
 import { VueDraggableNext } from 'vue-draggable-next'
+
 const props = defineProps<{
   title: String
   cardsList: Array<{ id: number; title: string; description: string }>
 }>()
+
 const emit = defineEmits(['update:cardsList'])
 
 const handleDragEnd = () => {
