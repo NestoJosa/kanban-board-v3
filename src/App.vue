@@ -1,5 +1,6 @@
 <template>
-  <div class="kanban-board">
+  <h2 class="text-center">Kanban Board V3</h2>
+  <div class="d-flex justify-center">
     <StatusColumn :title="'To Do'" :cardsList="todoCards" @update:cardsList="updateTodoCards" />
     <StatusColumn :title="'Doing'" :cardsList="doingCards" @update:cardsList="updateDoingCards" />
     <StatusColumn :title="'Done'" :cardsList="doneCards" @update:cardsList="updateDoneCards" />
@@ -73,10 +74,4 @@ const updateDoneCards = (newCards: Card[]) => {
 }
 </script>
 
-<style scoped>
-.kanban-board {
-  display: flex;
-  align-items: top;
-  justify-content: center;
-}
-</style>
+<style scoped></style>
