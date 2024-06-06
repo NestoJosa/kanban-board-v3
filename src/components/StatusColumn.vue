@@ -28,6 +28,7 @@ defineProps<{
 
 .status-column h2 {
   margin-bottom: 20px;
+  text-align: center;
 }
 
 .status-column ul {
