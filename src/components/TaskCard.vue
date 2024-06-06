@@ -1,5 +1,5 @@
 <template>
-  <v-card class="border pa-4 mb-2 brand-purple brand-yellow" outlined>
+  <v-card class="border pa-4 mb-2 brand-purple white-bg" outlined>
     <v-card-title>{{ title }}</v-card-title>
     <v-card-text>{{ description }}</v-card-text>
   </v-card>
@@ -17,7 +17,7 @@ defineProps<{
   color: rgb(56, 16, 16);
 }
 
-.brand-yellow {
-  color: #ffedc4;
+.white-bg {
+  background-color: white !important;
 }
 </style>

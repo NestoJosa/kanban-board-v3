@@ -87,6 +87,6 @@ const updateDoneCards = (newCards: Card[]) => {
 
 <style>
 body {
-  background-color: #ffedc4;
+  background-color: #f2b8b420;
 }
 </style>
