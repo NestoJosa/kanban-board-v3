@@ -1,5 +1,4 @@
 <template>
-  <h1>Kanban Board v3</h1>
   <div class="kanban-board">
     <StatusColumn :title="'To Do'" :cardsList="todoCards" />
     <StatusColumn :title="'Doing'" :cardsList="doingCards" />
