@@ -34,4 +34,15 @@ describe('StatusColumn', () => {
     const foundTaskCards = wrapper.findAllComponents(TaskCard)
     expect(foundTaskCards.length).toBe(cardsList.length)
   })
+
+  it('renders TaskCard components with correct props', () => {
+    cardsList.forEach((card, index) => {
+      // Find all TaskCard components in the StatusColumn,
+      // select the one at the current index,
+      // and assign it to 'taskCard'
+      const taskCard = wrapper.findAllComponents(TaskCard)[index]
+      expect(taskCard.props().title).toBe(card.title)
+      expect(taskCard.props().description).toBe(card.description)
+    })
+  })
 })
