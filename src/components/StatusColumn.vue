@@ -17,4 +17,21 @@ defineProps<{
 }>()
 </script>
 
-<style scoped></style>
+<style scoped>
+.status-column {
+  border: 1px solid #ccc;
+  padding: 20px;
+  background-color: #f9f9f9;
+  width: 250px;
+  margin-right: 20px;
+}
+
+.status-column h2 {
+  margin-bottom: 20px;
+}
+
+.status-column ul {
+  list-style-type: none;
+  padding: 0;
+}
+</style>
