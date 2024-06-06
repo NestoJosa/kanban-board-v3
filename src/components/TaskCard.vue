@@ -1,8 +1,8 @@
 <template>
-  <div class="task-card">
-    <h2>{{ title }}</h2>
-    <p>{{ description }}</p>
-  </div>
+  <v-card class="task-card" outlined>
+    <v-card-title>{{ title }}</v-card-title>
+    <v-card-text>{{ description }}</v-card-text>
+  </v-card>
 </template>
 
 <script setup lang="ts">
