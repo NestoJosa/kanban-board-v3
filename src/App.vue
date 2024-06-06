@@ -1,5 +1,5 @@
 <template>
-  <h1>Hola</h1>
+  <h1>Kanban Board v3</h1>
   <StatusColumn :title="'To Do'" :cardsList="cardsList" />
 </template>
 
