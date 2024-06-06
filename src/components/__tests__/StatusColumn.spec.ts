@@ -1,9 +1,13 @@
-import { describe, it, expect } from 'vitest'
-import { mount } from '@vue/test-utils'
+import { describe, it, expect, beforeEach } from 'vitest'
+import { mount, VueWrapper } from '@vue/test-utils'
 import StatusColumn from '../StatusColumn.vue'
 import TaskCard from '../TaskCard.vue'
 
 describe('StatusColumn', () => {
+  // Declare a variable 'wrapper' of type VueWrapper
+  // to hold the instance of the mounted Vue component
+  let wrapper: VueWrapper<any>
+
   const title = 'Status Column Title'
   const cardsList = [
     { id: 1, title: 'Task 1', description: 'Task 1 description' },
@@ -12,13 +16,15 @@ describe('StatusColumn', () => {
     { id: 4, title: 'Task 4', description: 'Task 4 description' }
   ]
 
+  beforeEach(() => {
+    wrapper = mount(StatusColumn, { props: { title, cardsList } })
+  })
+
   it('renders a title', () => {
-    const wrapper = mount(StatusColumn, { props: { title, cardsList } })
     expect(wrapper.text()).toContain(title)
   })
 
   it('renders a list of task cards', () => {
-    const wrapper = mount(StatusColumn, { props: { title, cardsList } })
     const foundTaskCards = wrapper.findAllComponents(TaskCard)
     expect(foundTaskCards.length).toBe(cardsList.length)
   })
