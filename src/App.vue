@@ -1,15 +1,16 @@
 <template>
   <div class="kanban-board">
-    <StatusColumn :title="'To Do'" :cardsList="todoCards" />
-    <StatusColumn :title="'Doing'" :cardsList="doingCards" />
-    <StatusColumn :title="'Done'" :cardsList="doneCards" />
+    <StatusColumn :title="'To Do'" :cardsList="todoCards" @update:cardsList="updateTodoCards" />
+    <StatusColumn :title="'Doing'" :cardsList="doingCards" @update:cardsList="updateDoingCards" />
+    <StatusColumn :title="'Done'" :cardsList="doneCards" @update:cardsList="updateDoneCards" />
   </div>
 </template>
 
 <script setup lang="ts">
+import { ref } from 'vue'
 import StatusColumn from './components/StatusColumn.vue'
 
-const todoCards = [
+const todoCards = ref([
   {
     id: 1,
     title: 'Second firmament make creeping',
@@ -28,8 +29,8 @@ const todoCards = [
     description:
       'Purpose he judge indicate rubber tell easier far highway cover printed form cream tears writer do brick there stone broad frozen three universe fall'
   }
-]
-const doingCards = [
+])
+const doingCards = ref([
   {
     id: 4,
     title: 'Nails smile everybody share',
@@ -42,15 +43,32 @@ const doingCards = [
     description:
       'Goose car rock size plus baseball traffic began had express bottom region trail structure gather earn worse butter older once lunch worker cowboy knew'
   }
-]
-const doneCards = [
+])
+const doneCards = ref([
   {
     id: 6,
     title: 'Law whispered curve am',
     description:
       'Egg hour high anyone trap fellow shine herself army green above lay engine uncle thrown require gasoline living met excellent drew large handsome pink'
   }
-]
+])
+type Card = {
+  id: number
+  title: string
+  description: string
+}
+
+const updateTodoCards = (newCards: Card[]) => {
+  todoCards.value = newCards
+}
+
+const updateDoingCards = (newCards: Card[]) => {
+  doingCards.value = newCards
+}
+
+const updateDoneCards = (newCards: Card[]) => {
+  doneCards.value = newCards
+}
 </script>
 
 <style scoped>
