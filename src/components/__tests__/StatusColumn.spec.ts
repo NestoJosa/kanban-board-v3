@@ -16,6 +16,8 @@ describe('StatusColumn', () => {
     { id: 4, title: 'Task 4', description: 'Task 4 description' }
   ]
 
+  // Before each test, mount the StatusColumn component with the given props
+  // and assign the resulting VueWrapper instance to the 'wrapper' variable
   beforeEach(() => {
     wrapper = mount(StatusColumn, { props: { title, cardsList } })
   })
