@@ -1,10 +1,21 @@
 <template>
-  <h2 class="text-center">Kanban Board V3</h2>
-  <div class="d-flex justify-center">
-    <StatusColumn :title="'To Do'" :cardsList="todoCards" @update:cardsList="updateTodoCards" />
-    <StatusColumn :title="'Doing'" :cardsList="doingCards" @update:cardsList="updateDoingCards" />
-    <StatusColumn :title="'Done'" :cardsList="doneCards" @update:cardsList="updateDoneCards" />
-  </div>
+  <v-container class="pa-3 pa-lg-12">
+    <v-row>
+      <v-col cols="12" md="4">
+        <StatusColumn :title="'To Do'" :cardsList="todoCards" @update:cardsList="updateTodoCards" />
+      </v-col>
+      <v-col cols="12" md="4">
+        <StatusColumn
+          :title="'Doing'"
+          :cardsList="doingCards"
+          @update:cardsList="updateDoingCards"
+        />
+      </v-col>
+      <v-col cols="12" md="4">
+        <StatusColumn :title="'Done'" :cardsList="doneCards" @update:cardsList="updateDoneCards" />
+      </v-col>
+    </v-row>
+  </v-container>
 </template>
 
 <script setup lang="ts">
@@ -74,4 +85,8 @@ const updateDoneCards = (newCards: Card[]) => {
 }
 </script>
 
-<style scoped></style>
+<style>
+body {
+  background-color: #ffedc4;
+}
+</style>
