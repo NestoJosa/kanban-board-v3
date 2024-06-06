@@ -22,6 +22,10 @@ describe('StatusColumn', () => {
     wrapper = mount(StatusColumn, { props: { title, cardsList } })
   })
 
+  it('renders without crashing', () => {
+    expect(wrapper.exists()).toBe(true)
+  })
+
   it('renders a title', () => {
     expect(wrapper.text()).toContain(title)
   })
