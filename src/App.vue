@@ -52,6 +52,8 @@ const doneCards = ref([
       'Egg hour high anyone trap fellow shine herself army green above lay engine uncle thrown require gasoline living met excellent drew large handsome pink'
   }
 ])
+
+// Define a type 'Card' which represents a card object.
 type Card = {
   id: number
   title: string

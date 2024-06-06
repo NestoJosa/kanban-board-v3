@@ -8,11 +8,7 @@
       itemKey="id"
       @change="handleDragEnd"
     >
-      <div
-        class="list-group-item bg-gray-300 m-1 p-3 rounded-md text-center"
-        v-for="element in props.cardsList"
-        :key="element.id"
-      >
+      <div class="" v-for="element in props.cardsList" :key="element.id">
         <TaskCard :title="element.title" :description="element.description" />
       </div>
     </VueDraggableNext>
