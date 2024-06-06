@@ -1,8 +1,8 @@
 <template>
-  <div class="status-column">
-    <h2>{{ title }}</h2>
+  <div class="border fill-height pa-3">
+    <h2 class="brand-purple text-center ma-3">{{ title }}</h2>
     <VueDraggableNext
-      class="drag-area"
+      class="fill-height"
       :list="props.cardsList"
       group="cards"
       itemKey="id"
@@ -32,25 +32,7 @@ const handleDragEnd = () => {
 </script>
 
 <style scoped>
-.status-column {
-  border: 1px solid #ccc;
-  padding: 20px;
-  background-color: #f9f9f9;
-  width: 250px;
-  margin-right: 20px;
-}
-
-.status-column h2 {
-  margin-bottom: 20px;
-  text-align: center;
-}
-
-.status-column ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-.drag-area {
-  height: 100%;
+.brand-purple {
+  color: rgb(56, 16, 16);
 }
 </style>

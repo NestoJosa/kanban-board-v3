@@ -1,5 +1,5 @@
 <template>
-  <v-card class="task-card" outlined>
+  <v-card class="border pa-4 mb-2 brand-purple brand-yellow" outlined>
     <v-card-title>{{ title }}</v-card-title>
     <v-card-text>{{ description }}</v-card-text>
   </v-card>
@@ -13,9 +13,11 @@ defineProps<{
 </script>
 
 <style scoped>
-.task-card {
-  border: 1px solid #ccc;
-  padding: 20px;
-  margin: 10px;
+.brand-purple {
+  color: rgb(56, 16, 16);
+}
+
+.brand-yellow {
+  color: #ffedc4;
 }
 </style>
