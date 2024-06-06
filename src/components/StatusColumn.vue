@@ -2,7 +2,7 @@
   <div class="status-column">
     <h2>{{ title }}</h2>
     <VueDraggableNext
-      class="dragArea"
+      class="drag-area"
       :list="props.cardsList"
       group="cards"
       itemKey="id"
@@ -50,5 +50,9 @@ const handleDragEnd = () => {
 .status-column ul {
   list-style-type: none;
   padding: 0;
+}
+
+.drag-area {
+  height: 100%;
 }
 </style>
