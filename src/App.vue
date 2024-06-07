@@ -1,5 +1,6 @@
 <template>
   <v-container class="pa-4 pa-lg-8">
+    <h1 class="text-center py-4 brand-color-purple">Kanban Board v3</h1>
     <v-row>
       <v-col cols="12" md="4">
         <StatusColumn :title="'To Do'" :cardsList="todoCards" @update:cardsList="updateTodoCards" />
