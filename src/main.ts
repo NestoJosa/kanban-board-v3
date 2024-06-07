@@ -9,6 +9,9 @@ import * as directives from 'vuetify/directives'
 // Components
 import App from './App.vue'
 
+// My Styles
+import './assets/main.css'
+
 // Include ALL components and directives
 const vuetify = createVuetify({
   components,
