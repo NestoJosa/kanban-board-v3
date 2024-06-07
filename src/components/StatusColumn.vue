@@ -1,6 +1,6 @@
 <template>
-  <div class="brand-bg-yellow border fill-height pa-4 rounded">
-    <h2 class="color-purple text-center my-8">{{ title }}</h2>
+  <div class="brand-bg-yellow border fill-height rounded pa-4">
+    <h2 class="color-purple text-center my-2 my-md-4">{{ title }}</h2>
     <VueDraggableNext
       class="fill-height"
       :list="props.cardsList"

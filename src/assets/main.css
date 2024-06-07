@@ -18,6 +18,7 @@ body {
 
 .v-card:hover {
   cursor: grab;
+  background-color: #f5f5f5;
 }
 
 .v-card:active {

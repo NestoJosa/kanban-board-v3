@@ -1,5 +1,5 @@
 <template>
-  <v-container class="pa-3 pa-lg-12">
+  <v-container class="pa-4 pa-lg-8">
     <v-row>
       <v-col cols="12" md="4">
         <StatusColumn :title="'To Do'" :cardsList="todoCards" @update:cardsList="updateTodoCards" />
