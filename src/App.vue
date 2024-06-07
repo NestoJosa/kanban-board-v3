@@ -85,8 +85,4 @@ const updateDoneCards = (newCards: Card[]) => {
 }
 </script>
 
-<style>
-body {
-  background-color: #f2b8b420;
-}
-</style>
+<style></style>
