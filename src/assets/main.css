@@ -1,3 +1,15 @@
 body {
   background-color: #f2b8b420;
 }
+
+.brand-color-purple {
+  color: #381010;
+}
+
+.brand-bg-white {
+  background-color: white;
+}
+
+.brand-bg-yellow {
+  background-color: #ffecbe50;
+}

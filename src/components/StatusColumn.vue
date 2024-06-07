@@ -1,6 +1,6 @@
 <template>
-  <div class="brand-yellow border fill-height pa-3">
-    <h2 class="brand-purple text-center ma-3">{{ title }}</h2>
+  <div class="brand-bg-yellow border fill-height pa-4 rounded">
+    <h2 class="color-purple text-center my-8">{{ title }}</h2>
     <VueDraggableNext
       class="fill-height"
       :list="props.cardsList"
@@ -31,12 +31,4 @@ const handleDragEnd = () => {
 }
 </script>
 
-<style scoped>
-.brand-purple {
-  color: rgb(56, 16, 16);
-}
-
-.brand-yellow {
-  background-color: #ffecbe50;
-}
-</style>
+<style scoped></style>
