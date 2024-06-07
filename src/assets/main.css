@@ -13,3 +13,13 @@ body {
 .brand-bg-yellow {
   background-color: #ffecbe90;
 }
+
+/* Customize the v-card class from Vuetify */
+
+.v-card:hover {
+  cursor: grab;
+}
+
+.v-card:active {
+  cursor: grabbing;
+}
